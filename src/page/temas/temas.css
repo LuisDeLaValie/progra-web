@@ -1,0 +1,21 @@
+
+.temas-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 100px;
+
+}
+
+.tabla_temas{
+    width: 250px;
+    max-width: 250px;
+    background-color: aquamarine;
+    margin: 10px;
+}
+form{
+    width: 250px;
+    background-color: bisque;
+    padding: 50px;
+    margin: 10px;
+}

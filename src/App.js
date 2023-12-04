@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import Inicio from './page/inicio/Inicio'
+import Temas from './page/temas/Temas'
+import Autores from './page/autores/Autores'
+import NotFound from './page/not fount/NotFound';
+import NavBar from './componentes/nav bar/NavBAr';
+import Agregartema from './page/agregartema/agregartema';
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <NavBar></NavBar>
+      <Routes>
+        <Route path='/' element={ <Inicio/> }/>
+        <Route path='/temas' element={ <Temas/> }/>
+        <Route path='/autores' element={ <Autores/> }/>
+        <Route path='/agregartema' element={ <Agregartema/> }/>
+        
+        <Route path='/*' element={ <NotFound/> }/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

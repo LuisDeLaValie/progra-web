@@ -6,6 +6,8 @@ import Autores from './page/autores/Autores'
 import NotFound from './page/not fount/NotFound';
 import NavBar from './componentes/nav bar/NavBAr';
 import Agregartema from './page/agregartema/agregartema';
+import Libors from './page/libros/libors';
+import CrearLibro from './page/crearlibro/crear_libro';
 
 function App(props) {
   return (
@@ -16,6 +18,8 @@ function App(props) {
         <Route path='/temas' element={ <Temas/> }/>
         <Route path='/autores' element={ <Autores/> }/>
         <Route path='/agregartema' element={ <Agregartema/> }/>
+        <Route path='/libros' element={ <Libors/> }/>
+        <Route path='/agregarlibro' element={ <CrearLibro/> }/>
         
         <Route path='/*' element={ <NotFound/> }/>
       </Routes>

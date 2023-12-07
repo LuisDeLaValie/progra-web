@@ -36,29 +36,33 @@ function CrearLibro() {
       };
 
   return (
-    <div>
-    <form onSubmit={handleSubmit}>                
-        <label>Titulo</label>
-        <input name="titulo" value={formData.nombre} onChange={handleChange}></input>
-        <br />
-        <label>Edicion</label>
-        <input name="edicion" value={formData.nombre} onChange={handleChange}></input>
-        <br />
-        <label>Autor</label>
+  <div className='form-container'>
+    <form className="row g-3" onSubmit={handleSubmit}>
+      <div className="col-md-6">
+        <label for="inputEmail4" className="form-label">Titulo</label>
+        <input name="titulo" className="form-control" value={formData.nombre} onChange={handleChange}/>
+      </div>
+      <div className="col-md-6">
+        <label for="inputPassword4" className="form-label">Edicios</label>
+        <input name="edicion" className="form-control" value={formData.nombre} onChange={handleChange}/>
+      </div>
+      <div className="col-md-12">
+        <label for="inputState" className="form-label">Autor</label>
         <SelectData listado={"autores"} name="fk_id_autor"  onChange={handleChange}></SelectData>
-        <br />
-        <label>Editorial</label>
+      </div>
+      <div className="col-md-12">
+        <label for="inputState" className="form-label">Editorial</label>
         <SelectData listado={"editorial"} name="fk_id_editorial"  onChange={handleChange}></SelectData>
-        <br />
-        <label>Tema</label>
+      </div>
+      <div className="col-md-12">
+        <label for="inputState" className="form-label">Tema</label>
         <SelectData listado={"temas"} name="fk_id_tema"  onChange={handleChange}></SelectData>
-        
-        <br />
-
-        <button type="submit" disabled={isLoading}> {isLoading? "Enviando..":"Enviar" }</button>
-
-      </form>
-    </div>
+      </div>
+      <div className="col-12">
+        <button type="submit" className="btn btn-primary" disabled={isLoading}> {isLoading? "Enviando..":"Enviar" }</button>
+      </div>
+    </form>
+  </div>
   )
 }
 

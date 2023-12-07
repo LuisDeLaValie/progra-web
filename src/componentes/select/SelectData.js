@@ -23,7 +23,7 @@ function SelectData({listado,onChange,name}) {
 
   return (
     <div>
-      <select value={opcionSeleccionada} name={name} onChange={handleSelectChange}>
+      <select value={opcionSeleccionada} name={name} onChange={handleSelectChange}  className="form-select">
           <option value="0">Selecione un Dato</option>
           {
             datos.map((dato)=>{

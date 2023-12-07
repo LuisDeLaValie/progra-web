@@ -12,24 +12,26 @@ function Libors() {
 
   return (
     <div>
-        <table>
+        <table className="table table-striped">
             <thead>
                 <tr>
-                 <th>titulo</th> 
-                 <th>edicion</th> 
-                 <th>editorial</th> 
-                 <th>tema</th> 
+                    <th scope="col">titulo</th> 
+                    <th scope="col">edicion</th> 
+                    <th scope="col">editorial</th> 
+                    <th scope="col">tema</th> 
                 </tr>
-            </thead>   
+            </thead>
             <tbody>
             {libros.map(libro => (
-                <tr key={libro.id_libro}>
+                <tr>
+                    <th scope="row">{libro.id_libro}</th>
                     <td>{libro.titulo}</td> 
                     <td>{libro.edicion}</td> 
                     <td>{libro.editorial}</td> 
                     <td>{libro.tema}</td> 
                 </tr>
             ))}
+            
             </tbody>
         </table>
     </div>

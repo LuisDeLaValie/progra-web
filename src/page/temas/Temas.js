@@ -18,22 +18,22 @@ function Temas() {
     <div>
       <h1>Temas</h1>
         <div className='temas-container'>
-            <table className='tabla_temas'>
-                <thead>
-                    <tr>
-                        <th>Temas</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {temas.map(temas => (
-                        <tr key={temas.id_tema}>
-                            <td>{temas.nombre}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-
-           
+        <table className="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tema</th>
+                </tr>
+            </thead>
+            <tbody>
+            {temas.map(temas => (
+                <tr>
+                    <th scope="row">{temas.id_tema}</th>
+                    <td>{temas.nombre}</td>
+                </tr>
+            ))}
+            </tbody>
+        </table>
 
         </div>
     </div>

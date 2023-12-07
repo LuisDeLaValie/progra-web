@@ -31,16 +31,17 @@ function Agregartema() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>                
-        <div>
-            <label>
-            nombre:
-            <input name="nombre" value={formData.nombre} onChange={handleChange}></input>
-            </label>
-            {isError&& <span>Algo salio mal intente mas tarde</span>}
-        </div>
-        <button type="submit" disabled={isLoading}> {isLoading? "Enviando..":"Enviar" }</button>
-    </form> 
+    <div className='form-container'>
+      <form className="row g-3" onSubmit={handleSubmit}>
+            <div className="col-md-6">
+              <label for="inputEmail4" className="form-label">nombre</label>
+              <input name="nombre" className="form-control" value={formData.nombre} onChange={handleChange}></input>
+            </div>
+            <div className="col-12">
+              <button type="submit" className="btn btn-primary" disabled={isLoading}> {isLoading? "Enviando..":"Enviar" }</button>
+            </div>
+          </form>
+    </div>
   )
 }
 
